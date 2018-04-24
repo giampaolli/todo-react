@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js test:watch
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
 
 PATH: 
   C:\cmder\bin;C:\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\cmder\vendor\conemu-maximus5;C:\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\app\felipeg\product\11.2.0\client_1\bin;C:\oracle\product\10.2.0\client_1\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files\Java\jdk1.6.0_45\bin;C:\Java\Ant\apache-ant-1.6.2\bin;C:\Java\maven\maven-1.0.2-CPqD-3.2.0\bin;C:\Users\felipeg\Documents\Java\xdoclet-1.2.2\lib;%JBOSS_HOME %\bin;awt;C:\Program Files\TortoiseSVN\bin;C:\Java\maven\apache-maven-2.2.1\bin;C:\Program Files (x86)\GitExtensions\;C:\app\felipeg\product\11.2.0\client_1\bin;C:\Python27;C:\Program Files (x86)\Skype\Phone\;C:\PLSQL Developer;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\felipeg.AQUARIUS\AppData\Roaming\npm;C:\Program Files\Heroku\bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\Docker Toolbox;C:\Users\felipeg.AQUARIUS\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\cmder\
@@ -17,7 +17,7 @@ npm manifest:
   {
     "scripts": {
       "start": "yarn dev",
-      "dev": "webpack-dashboard -- node server.js",
+      "dev": "webpack -- node server.js",
       "test": "jest --coverage",
       "test:watch": "yarn test -- --watch",
       "lint": "standard --parser babel-eslint --verbose | snazzy",
@@ -77,7 +77,8 @@ npm manifest:
       "preact-compat": "^3.17.0",
       "prop-types": "^15.5.10",
       "react": "^15.6.1",
-      "react-dom": "^15.6.1"
+      "react-dom": "^15.6.1",
+      "redux": "^4.0.0"
     }
   }
 
@@ -7738,6 +7739,13 @@ Lockfile:
       loose-envify "^1.1.0"
       symbol-observable "^1.0.3"
   
+  redux@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.0.tgz#aa698a92b729315d22b34a0553d7e6533555cc03"
+    dependencies:
+      loose-envify "^1.1.0"
+      symbol-observable "^1.2.0"
+  
   regenerate@^1.2.1:
     version "1.3.3"
     resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.3.tgz#0c336d3980553d755c39b586ae3b20aa49c82b7f"
@@ -8755,7 +8763,7 @@ Lockfile:
       sax "~1.2.1"
       whet.extend "~0.9.9"
   
-  symbol-observable@^1.0.2, symbol-observable@^1.0.3:
+  symbol-observable@^1.0.2, symbol-observable@^1.0.3, symbol-observable@^1.2.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   
@@ -9695,9 +9703,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c yarn test -- --watch
+  Arguments: /d /s /c webpack -- node server.js
   Directory: C:\Users\felipeg.AQUARIUS\Documents\projetos\todo-list
   Output:
   
